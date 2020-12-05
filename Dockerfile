@@ -10,7 +10,6 @@ RUN npm run build
 
 
 FROM nginx:stable-alpine
-EXPOSE 80
 WORKDIR /usr/share/nginx/html
 COPY --from=builder /opt/app/dist .
-
+EXPOSE 80
