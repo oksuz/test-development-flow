@@ -11,10 +11,10 @@ script: docker run frontend-test npm run test
 deploy:
   provider: elasticbeanstalk
   region: eu-west-2
-  app: docker-frontend
-  env: DockerFrontend-env
+  app: DockerFrontendV2
+  env: Dockerfrontendv2-env
   bucket_name: elasticbeanstalk-eu-west-2-099893186618
-  bucket_path: docker-frontend
+  bucket_path: docker-frontend-v2
   on:
     branch: master
   access_key_id: $AWS_KEY_ID
