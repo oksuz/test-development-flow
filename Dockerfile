@@ -2,10 +2,10 @@ FROM node:10.0.0-alpine AS builder
 
 WORKDIR /opt/app
 
-COPY package.json .
+COPY ./frontend/package.json .
 RUN npm install
 VOLUME [ "/opt/app/node_modules" ]
-COPY . .
+COPY ./frontend .
 RUN npm run build
 
 
