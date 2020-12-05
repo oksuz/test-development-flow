@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t frontend-test -f frontend/Dockerfile.dev ./frontend 
 
-script: docker run --rm frontend-test npm run test
+script: docker run frontend-test npm run test
 
 
 deploy:
